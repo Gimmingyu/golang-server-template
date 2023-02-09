@@ -11,6 +11,10 @@ if [[ $STAGED_GO_FILES == "" ]]; then
 ## otherwise we can do stuff with these changed go files
 else
     for file in $STAGED_GO_FILES; do
-        echo $file
+        ## format our file
+        go fmt $file
+        ## add any potential changes from our formatting to the
+        ## commit
+        git add $file
     done
 fi
