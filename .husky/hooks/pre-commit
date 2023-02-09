@@ -16,5 +16,6 @@ else
         ## add any potential changes from our formatting to the
         ## commit
         git add $file
+        echo $file
     done
 fi
